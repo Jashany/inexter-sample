@@ -1,0 +1,137 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+background-color: #f5f4ef;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navitems{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.navitems>ul{
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navitems>ul>li{
+    color: #0e5a5a;
+    font-weight: 900;
+}
+
+.icon{
+    height: 40px;
+    width: 40px;
+    background-color: #ec6649;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    
+    transition: transform 0.4s ease-in-out;
+}
+.icon:hover{
+    transform: scale(1.3);
+    background-color: gray;
+}
+
+.icon img{
+    height: 80%;
+    width: 80%;
+    transform: rotateY  (180deg);
+}
+
+.navitems>ul img{
+  height: 20px;
+  width: 20px;
+transform: rotateZ(0deg);
+transition: transform 0.4s ease-in-out;
+}
+
+.navitems>ul>img:hover{
+    
+    transform: rotateZ(180deg);
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    line-height: 1.1;
+}
+
+.body img{
+    margin-top: 100px;
+    height: 40px;
+    animation: move 1.5s ease-in-out infinite;
+   
+}
+
+.body h2{
+    font-size:80px ;
+}
+.body h5{
+    margin-top: 100px;
+    font-size: 30px;
+}
+.body p{
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.body button{
+    background-color: transparent;
+    border: none;
+    margin-top: 30px ;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: solid 2px black;
+    transform: rotateZ(0deg);
+    transition: transform 0.4s ease-in-out;
+}
+
+.body button:hover{
+    border: none;
+    background-color: #0e5a5a;
+    color: white;
+    transform: rotateZ(-10deg);
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
